@@ -29,6 +29,10 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import Wechat from "./WeChat.png";
+import Zaika from "./Zaika.png";
+import cloudsufi from "./company/cloudsufi.png";
+import freelance from "./company/fr.png";
 
 export {
   logo,
@@ -59,4 +63,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  Wechat,
+  Zaika,
+  cloudsufi,
+  freelance,
 };

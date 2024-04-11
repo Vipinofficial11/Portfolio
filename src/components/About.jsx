@@ -1,35 +1,9 @@
-import React from 'react';
-import { Tilt } from 'react-tilt';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-import { styles } from '../style';
-import { services } from '../constants';
-import { fadeIn, textVariant } from '../utils/motion';
-import  {SectionWrapper}  from '../hoc/index';
-
-const ServiceCard = ({ index, title, icon }) => {
-  return (
-    <Tilt className="xs:w-[250px] w-full">
-      <motion.div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
-        <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450
-          }}
-          className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center
-            flex-col'
-          >
-            <img src={icon} alt={title} className='w-16 h-16 object-contain'/>
-            <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
-
-        </div>
-      </motion.div>
-    </Tilt>
-  )
-}
+import { styles } from "../style";
+import { fadeIn, textVariant } from "../utils/motion";
+import { SectionWrapper } from "../hoc/index";
 
 const About = () => {
   return (
@@ -41,25 +15,48 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className="mt-4 text-secondary text-[17px] max-w-6xl leading-[30px]"
       >
-
-        I'm a skilled software developer with experience in Java, JavaScript and expertise
-        in frameworks like React, Node.js, and Next.js. I'm a quick learner and a problem
-        solver, I usually collaborate with different teams and create efficient,
-        scalable and user-friendly solutions that solve real-world problems.
-
-
-        
+        I am a versatile full-stack developer with a strong command of Java,
+        Javascript, and Typescript. In the realm of Java, I excel in core java.
+        On the frontend, my expertise lies in React and Next.js, showcasing a
+        deep understanding of these frameworks. Complementing this, I am
+        well-acquainted with HTML, CSS, Tailwind, and Styled Components for
+        crafting visually appealing and responsive user interfaces.
+        <br /> <br />
+        On the backend, I am proficient in Node.js, Express.js, WebRTC and Web
+        sockets, leveraging these technologies to build robust server-side
+        solutions. My database proficiency spans MySQL, MongoDB, and Prisma
+        (ORM), ensuring efficient data management. <br /> <br />
+        In the realm of DevOps, I bring a wealth of experience in Kubernetes and
+        Docker for streamlined deployment and containerization. Proficient in
+        creating robust and efficient CI/CD pipelines, I leverage my deep
+        understanding of GitHub Actions, bash scripting, and YAML configurations
+        to automate workflows and ensure seamless integration. As a GCP
+        certified professional, I possess in-depth knowledge of Cloud Build,
+        Google Kubernetes Engine (GKE), Identity and Access Management (IAM),
+        Cloud Storage, Cloud Source Repository, Cloud SQL (MySQL and
+        PostgreSQL), Cloud Data Fusion, and more. <br /> <br />
+        When it comes to testing, I employ Jest and Selenium for end to end
+        testing, Mockito and Jmockit for Java unit testing creating a
+        comprehensive testing strategy that ensures the reliability of
+        applications. <br /> <br />
+        As a developer, I bring not only technical expertise but also strong
+        soft skills. I am a quick learner, a problem solver, and an effective
+        communicator. With a knack for clear and concise communication, I excel
+        in leading teams, facilitating collaboration, and training individuals.
+        My adaptability and commitment enable me to deliver high-quality
+        solutions on time, making me a valuable asset in any professional
+        setting.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      {/* <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
+      </div> */}
     </>
-  )
-}
+  );
+};
 
-export default SectionWrapper(About, "about")
+export default SectionWrapper(About, "about");

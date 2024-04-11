@@ -1,52 +1,58 @@
-import React, {Suspense} from 'react'
-import { Canvas } from '@react-three/fiber'
-import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei';
-import CanvasLoader from '../Loader';
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import {
+  Decal,
+  Float,
+  OrbitControls,
+  Preload,
+  useTexture,
+} from "@react-three/drei";
+import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl])
+  const [decal] = useTexture([props.imgUrl]);
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.25} />
+    <Float speed={1.75} rotationIntensity={1} floatIntensity={5}>
+      <ambientLight intensity={0.1} />
       <directionalLight position={[0, 0, 0.5]} />
 
       <mesh castShadow receiveShadow scale={2.75}>
-        <icosahedronGeometry args={[1,1]} />
-        <meshStandardMaterial 
-          color="#fff8eb"
+        <icosahedronGeometry args={[1, 1]} />
+        <meshStandardMaterial
+          color="#98ABEE"
           polygonOffset
           polygonOffsetFactor={-5}
-          flatShading />
+          flatShading
+        />
 
-          <Decal position={[0, 0, 1]}
+        <Decal
+          position={[0, 0, 1]}
           scale={1}
           rotation={[2 * Math.PI, 0, 6.25]}
           map={decal}
           flatShading
-          />
-
+        />
       </mesh>
     </Float>
-  )
-}
+  );
+};
 
-const BallCanvas = ({icon}) => {
+const BallCanvas = ({ icon }) => {
   return (
-    <Canvas 
-      frameLoop='demand'
+    <Canvas
+      frameLoop="demand"
       dpr={[1, 2]}
-      gl={{preserveDrawingBuffer: true}}
-      >
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls enableZoom={false} 
-            />
-            <Ball imgUrl={icon}/>
-        </Suspense>
+      gl={{ preserveDrawingBuffer: true }}
+    >
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls enableZoom={false} />
+        <Ball imgUrl={icon} />
+      </Suspense>
 
-        <Preload all />
+      <Preload all />
     </Canvas>
   );
 };
 
-export default BallCanvas
+export default BallCanvas;
