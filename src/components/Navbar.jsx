@@ -13,17 +13,21 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-black`}
     >
       <div className="w-full flex justify-end items-center max-w-7xl mx-auto">
-        {/* <Link
+        <Link
           to="/"
-          className="flex items-center gap-2"
+          className={`${
+            active === "" ? "text-white" : "text-secondary"
+          } flex mr-10`}
           onClick={() => {
             setActive("");
-            window.scrollTo(0, 0); //This will scroll to the top of the page.
+            window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <span className="sm:block hidden"> | Portfolio </span>
-        </Link> */}
+          <span className="sm:block hidden text-[18px] font-medium hover:text-white">
+            {" "}
+            Home{" "}
+          </span>
+        </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (

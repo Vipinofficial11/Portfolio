@@ -28,11 +28,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative w-[45vw] h-[30vh] overflow-hidden rounded-full skew-y-6 bg-gradient-to-r from-[#5d34b7] to-[#eef2f1] shadow-md shadow-white py-1 sm:w-[20vw] sm:h-[20vh] md:w-[50vw] md:h-[40vh] lg:w-[20vw] lg:h-[42vh] xl:w-[20vw] xl:h-[42vh] mt-[200px]">
+      <div className="relative w-[45vw] h-[45vh] overflow-hidden rounded-full shadow-md  p-1 sm:w-[20vw] sm:h-[20vh] md:w-[50vw] md:h-[40vh] lg:w-[20vw] lg:h-[42vh] xl:w-[20vw] xl:h-[42vh] mt-[200px]">
+        <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_180deg_at_50%_50%,#E2CBFF_0%,#31363F_50%,#915eff_100%)]" />
         <img
           src={profile}
           alt="profile.png"
-          className="h-full w-full object-cover transform skew-y-[-6deg] rounded-full"
+          className="h-[97%] w-[95%] object-cover absolute rounded-full p-1"
         />
       </div>
 
