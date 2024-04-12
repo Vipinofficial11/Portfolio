@@ -13,17 +13,11 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   carrent,
-  jobit,
   tripguide,
   Wechat,
-  threejs,
+  accernity,
   Zaika,
   cloudsufi,
   freelance,
@@ -207,7 +201,7 @@ const projects = [
       },
     ],
     image: Zaika,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Vipinofficial11/Zaika.git",
   },
   {
     name: "WeChat",
@@ -232,7 +226,7 @@ const projects = [
       },
     ],
     image: Wechat,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Vipinofficial11/Wechat.git",
   },
   {
     name: "Thrift Store",
@@ -265,19 +259,19 @@ const projects = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Vipinofficial11/ecommerce-front.git",
   },
   {
-    name: "Zaika",
+    name: "Accernity - Landing Page",
     description:
-      "Web-based platform that allows users to order there faviourate food from various providers, providing a convenient and efficient solution for late night hungers.",
+      "A captivating demo landing page showcasing animated components and visually-rich UI elements.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "redux",
+        name: "Framer-motion",
         color: "green-text-gradient",
       },
       {
@@ -285,70 +279,12 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "swiggy API",
+        name: "Accernity",
         color: "blue-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "WeChat",
-    description:
-      "Web application that enables users to chat and see each other one on one.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "WebRTC",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Socket.io",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Thrift Store",
-    description:
-      "A comprehensive ecommerce platform that allows users to sell and buy things at cheap prices.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "next-auth",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "styled-components",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "nodejs & express",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: accernity,
+    source_code_link: "https://github.com/Vipinofficial11/intuit.git",
   },
 ];
 

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../style";
+import { profile } from "../assets";
 
 const Hero = () => {
   return (
@@ -29,7 +30,7 @@ const Hero = () => {
 
       <div className="relative w-[45vw] h-[30vh] overflow-hidden rounded-full skew-y-6 bg-gradient-to-r from-[#5d34b7] to-[#eef2f1] shadow-md shadow-white py-1 sm:w-[20vw] sm:h-[20vh] md:w-[50vw] md:h-[40vh] lg:w-[20vw] lg:h-[42vh] xl:w-[20vw] xl:h-[42vh] mt-[200px]">
         <img
-          src="src/assets/IMG_0704.jpeg"
+          src={profile}
           alt="profile.png"
           className="h-full w-full object-cover transform skew-y-[-6deg] rounded-full"
         />

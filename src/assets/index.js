@@ -33,6 +33,8 @@ import Wechat from "./Wechat.png";
 import Zaika from "./Zaika.png";
 import cloudsufi from "./company/cloudsufi.png";
 import freelance from "./company/fr.png";
+import profile from "./profile.png";
+import accernity from "./accernity.png";
 
 export {
   logo,
@@ -67,4 +69,6 @@ export {
   Zaika,
   cloudsufi,
   freelance,
+  profile,
+  accernity
 };
