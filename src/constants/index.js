@@ -259,7 +259,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: "",
     source_code_link: "https://github.com/Vipinofficial11/ecommerce-front.git",
   },
   {
