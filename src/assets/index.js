@@ -35,6 +35,7 @@ import cloudsufi from "./company/cloudsufi.png";
 import freelance from "./company/fr.png";
 import profile from "./profile.png";
 import accernity from "./accernity.png";
+import flash from "./flash.png"
 
 export {
   logo,
@@ -70,5 +71,6 @@ export {
   cloudsufi,
   freelance,
   profile,
-  accernity
+  accernity,
+  flash
 };

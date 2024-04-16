@@ -21,6 +21,7 @@ import {
   Zaika,
   cloudsufi,
   freelance,
+  flash,
 } from "../assets";
 
 export const navLinks = [
@@ -285,6 +286,43 @@ const projects = [
     ],
     image: accernity,
     source_code_link: "https://github.com/Vipinofficial11/intuit.git",
+  },
+  {
+    name: "Flash",
+    description:
+      "Experience lightning-fast country searches with streamlined web application powered by Cloudflare Workers. Enjoy the convenience of instant results with minimal latency.",
+    tags: [
+      {
+        name: "Next",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Framer-motion",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Accernity",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Hono",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "CloudFlare Workers",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Redis-upstash",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: flash,
+    source_code_link: "https://github.com/Vipinofficial11/flash.git",
   },
 ];
 

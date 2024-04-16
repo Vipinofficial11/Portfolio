@@ -33,7 +33,7 @@ const Hero = () => {
         <img
           src={profile}
           alt="profile.png"
-          className="h-[97%] w-[95%] object-cover absolute rounded-full p-1"
+          className="h-[98%] w-[97%] object-cover absolute rounded-full p-1"
         />
       </div>
 
