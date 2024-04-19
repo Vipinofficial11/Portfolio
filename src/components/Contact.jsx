@@ -1,61 +1,65 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { styles } from "../style";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-
 const Contact = () => {
-
   const formRef = useRef();
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
+    name: "",
+    email: "",
+    message: "",
+  });
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const {name, value} = e.target;
-
-    setForm({...form, [name]: value})
-
-  }
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    // Service Id and Template Id.
+    emailjs
+      .send(
+        "service_5z0vq4q",
+        "template_vf4mwfc",
+        {
+          from_name: form.name,
+          to_name: "Vipin",
+          from_email: form.email,
+          to_email: "vipinofficialv1@gmail.com",
+          message: form.message,
+        },
+        "iyugGqGAkFRqdBvz2"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
 
-    emailjs.send("service_vpoqgym", "template_omf4q37", 
-    {
-      from_name: form.name,
-      to_name: 'Vipin',
-      from_email: form.email,
-      to_email: 'vipinbhattvu3034@gmail.com',
-      message: form.message,
-    }, "b1Mo9q3RoeMH6P2Wm"
-    ).then(() => {
-      setLoading(false);
-      alert('Thank you. I will get back to you as soon as possible.');
-
-      setForm({
-        name: '',
-        email: '',
-        message: '',
-      })
-    }, (error) => {
-      console.log(error);
-      setLoading(false);
-      alert('Sorry, Something went wrong.')
-    });
-  }
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error);
+          setLoading(false);
+          alert("Sorry, Something went wrong.");
+        }
+      );
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
-        variants={slideIn('left', "tween", 0.2, 1)}
+        variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
@@ -66,7 +70,6 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
-
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
@@ -106,26 +109,24 @@ const Contact = () => {
             />
           </label>
 
-          <button 
+          <button
             type="subit"
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold
             shadow-primary shadow-md rounded-xl"
-            >
-            {loading ? 'Sending...' : 'Send'}
+          >
+            {loading ? "Sending..." : "Send"}
           </button>
-
         </form>
       </motion.div>
 
       <motion.div
-        variants={slideIn('right', "tween", 0.2, 1)}
+        variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-      
-          <EarthCanvas />
+        <EarthCanvas />
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default SectionWrapper(Contact, "contact")
+export default SectionWrapper(Contact, "contact");

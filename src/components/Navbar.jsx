@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-black`}
     >
-      <div className="flex flex-col gap-2">
+      <div className="w-full flex flex-row gap-x-5 mx-auto">
         <div className="flex flex-row gap-x-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const Navbar = () => {
             />
           </svg>
 
-          <span className="text-[18px] font-medium hover:text-white text-secondary">
+          <span className="text-[18px] hover:text-white text-secondary">
             {" "}
             vipinofficialv1@gmail.com{" "}
           </span>
@@ -51,7 +51,7 @@ const Navbar = () => {
             />
           </svg>
 
-          <span className="text-[18px] font-medium hover:text-white text-secondary">
+          <span className="text-[18px] hover:text-white text-secondary">
             {" "}
             +91-8506842532{" "}
           </span>

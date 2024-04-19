@@ -15,7 +15,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-6xl leading-[30px]"
+        className="mt-4 text-secondary text-[18px] max-w-6xl leading-[30px]"
       >
         I am a versatile full-stack developer with a strong command of Java,
         Javascript, and Typescript. In the realm of Java, I excel in core java.
@@ -49,12 +49,6 @@ const About = () => {
         solutions on time, making me a valuable asset in any professional
         setting.
       </motion.p>
-
-      {/* <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div> */}
     </>
   );
 };

@@ -22,6 +22,7 @@ import {
   cloudsufi,
   freelance,
   flash,
+  thriftly,
 } from "../assets";
 
 export const navLinks = [
@@ -259,7 +260,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "",
+    image: thriftly,
     source_code_link: "https://github.com/Vipinofficial11/ecommerce-front.git",
   },
   {
